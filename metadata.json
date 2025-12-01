@@ -1,6 +1,6 @@
 {
-  "name": "متابعة أخي - لغة إنجليزية",
-  "description": "App for tracking English language learning progress with weekly tasks and audio pronunciation checks.",
+  "name": "English Tracker HTML",
+  "description": "Vanilla HTML/JS App for tracking English language learning progress.",
   "requestFramePermissions": [
     "microphone"
   ]
