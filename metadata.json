@@ -1,0 +1,7 @@
+{
+  "name": "متابعة أخي - لغة إنجليزية",
+  "description": "App for tracking English language learning progress with weekly tasks and audio pronunciation checks.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
