@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English Tracker - متابعة اللغة الإنجليزية</title>
+    <title>منصة إنجاز | لمتابعة اللغة الإنجليزية</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -50,12 +50,12 @@
         animation: slideOut 0.3s ease-in forwards;
       }
       @keyframes slideIn {
-        from { transform: translateX(-100%); opacity: 0; }
+        from { transform: translateX(100%); opacity: 0; }
         to { transform: translateX(0); opacity: 1; }
       }
       @keyframes slideOut {
         from { transform: translateX(0); opacity: 1; }
-        to { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(-100%); opacity: 0; }
       }
 
       /* Custom Scrollbar */
@@ -81,12 +81,12 @@
     <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
         <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
           <div class="flex items-center gap-3">
-            <div class="bg-gradient-to-tr from-indigo-600 to-violet-600 p-2.5 rounded-xl text-white shadow-lg shadow-indigo-500/20">
-               <i data-lucide="languages" class="w-5 h-5"></i>
+            <div class="bg-gradient-to-tr from-yellow-500 to-orange-500 p-2.5 rounded-xl text-white shadow-lg shadow-orange-500/20">
+               <i data-lucide="trophy" class="w-6 h-6"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg text-slate-800 font-en leading-tight">English Tracker</h1>
-                <p class="text-[10px] text-slate-500 font-semibold tracking-wide">LEARNING DASHBOARD</p>
+                <h1 class="font-bold text-lg text-slate-800 leading-tight">منصة إنجاز</h1>
+                <p class="text-[10px] text-slate-500 font-semibold tracking-wide font-en">INJAZ TRACKER</p>
             </div>
           </div>
           <button id="logoutBtn" onclick="app.logout()" class="hidden flex items-center gap-2 text-sm text-slate-500 hover:text-red-500 font-medium transition-colors px-3 py-1.5 rounded-lg hover:bg-red-50 cursor-pointer">
@@ -102,8 +102,8 @@
         <!-- View: Login / Role Selection -->
         <div id="view-login" class="fade-in max-w-4xl mx-auto pt-8">
             <div class="text-center mb-12">
-                <span class="bg-indigo-50 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block tracking-wide">WELCOME BACK</span>
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4 font-en">Who is learning today?</h1>
+                <span class="bg-indigo-50 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block tracking-wide">أهلاً بعودتك</span>
+                <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">من سيقوم بتسجيل الدخول؟</h1>
                 <p class="text-slate-500 text-lg">يرجى اختيار الحساب للمتابعة</p>
             </div>
 
@@ -116,7 +116,7 @@
                             <i data-lucide="graduation-cap" class="w-12 h-12 text-blue-600"></i>
                         </div>
                         <h2 class="text-2xl font-bold text-slate-800 mb-2">الطالب</h2>
-                        <p class="text-slate-400 text-sm mb-6">الدخول لمتابعة المهام الأسبوعية</p>
+                        <p class="text-slate-400 text-sm mb-6">الدخول لإنجاز المهام الأسبوعية</p>
                         <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white shadow-lg shadow-blue-500/30 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                             <i data-lucide="arrow-left" class="w-5 h-5"></i>
                         </div>
@@ -124,15 +124,15 @@
                 </button>
 
                 <!-- Admin Card -->
-                <button onclick="app.openLoginModal('ADMIN')" class="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-200 hover:border-indigo-400 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 text-center overflow-hidden w-full">
-                    <div class="absolute inset-0 bg-indigo-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <button onclick="app.openLoginModal('ADMIN')" class="group relative bg-white p-8 rounded-3xl shadow-sm border border-slate-200 hover:border-orange-400 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 text-center overflow-hidden w-full">
+                    <div class="absolute inset-0 bg-orange-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="relative z-10">
-                        <div class="w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="shield-check" class="w-12 h-12 text-indigo-600"></i>
+                        <div class="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="briefcase" class="w-12 h-12 text-orange-600"></i>
                         </div>
                         <h2 class="text-2xl font-bold text-slate-800 mb-2">المالك / المعلم</h2>
                         <p class="text-slate-400 text-sm mb-6">لوحة التحكم وإدارة المهام</p>
-                        <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600 text-white shadow-lg shadow-indigo-500/30 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-orange-600 text-white shadow-lg shadow-orange-500/30 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                              <i data-lucide="arrow-left" class="w-5 h-5"></i>
                         </div>
                     </div>
@@ -146,23 +146,23 @@
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                   <div class="flex items-center gap-3">
-                     <div class="p-2 bg-indigo-100 rounded-lg text-indigo-600">
+                     <div class="p-2 bg-orange-100 rounded-lg text-orange-600">
                          <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
                      </div>
                      <div>
                         <h2 class="text-xl font-bold text-slate-800">لوحة التحكم</h2>
-                        <p class="text-slate-500 text-xs font-medium">إدارة المحتوى التعليمي</p>
+                        <p class="text-slate-500 text-xs font-medium">إدارة المحتوى التعليمي ومراجعة التقارير</p>
                      </div>
                   </div>
         
                   <div class="flex items-center gap-3 w-full md:w-auto">
                      <!-- Week Selector -->
                      <div class="flex flex-1 md:flex-none items-center gap-2 bg-slate-50 p-1 rounded-xl border border-slate-200">
-                        <select id="adminWeekSelect" class="bg-transparent text-slate-700 font-bold text-sm py-2 pl-2 pr-4 outline-none cursor-pointer w-full md:w-48 font-en">
+                        <select id="adminWeekSelect" class="bg-transparent text-slate-700 font-bold text-sm py-2 pl-2 pr-4 outline-none cursor-pointer w-full md:w-48 text-right" dir="rtl">
                             <!-- Options populated by JS -->
                         </select>
                         <div class="w-px h-6 bg-slate-300"></div>
-                        <button onclick="app.toggleNewWeekInput()" class="p-2 hover:bg-white text-indigo-600 rounded-lg transition-all shadow-sm" title="أضف أسبوع جديد">
+                        <button onclick="app.toggleNewWeekInput()" class="p-2 hover:bg-white text-orange-600 rounded-lg transition-all shadow-sm" title="أضف أسبوع جديد">
                            <i data-lucide="plus" class="w-5 h-5"></i>
                         </button>
                      </div>
@@ -176,8 +176,8 @@
         
                 <!-- Add New Week Form -->
                 <div id="newWeekForm" class="hidden mt-4 pt-4 border-t border-slate-100 flex gap-2 fade-in">
-                      <input type="text" id="newWeekTitle" placeholder="Week Title (e.g. Week 5 - Grammar)" class="flex-1 px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none font-en text-sm" dir="auto" />
-                      <button onclick="app.createWeek()" class="px-5 py-2 bg-indigo-600 text-white rounded-xl font-bold text-sm hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/20">Add Week</button>
+                      <input type="text" id="newWeekTitle" placeholder="عنوان الأسبوع (مثال: الأسبوع 1 - القواعد)" class="flex-1 px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none text-sm" />
+                      <button onclick="app.createWeek()" class="px-5 py-2 bg-orange-600 text-white rounded-xl font-bold text-sm hover:bg-orange-700 transition-colors shadow-lg shadow-orange-500/20">إضافة</button>
                 </div>
             </div>
 
@@ -188,17 +188,18 @@
                     <div class="p-5 border-b border-slate-100 flex justify-between items-center bg-slate-50/50 rounded-t-2xl">
                         <h3 class="font-bold text-slate-800 flex items-center gap-2">
                           <i data-lucide="list-todo" class="w-5 h-5 text-blue-500"></i>
-                          <span class="font-en">Tasks Manager</span>
+                          <span>إدارة المهام</span>
                         </h3>
                         <button onclick="app.generateAITasks()" id="aiBtn" class="text-xs font-bold bg-white border border-purple-200 text-purple-600 px-3 py-1.5 rounded-lg flex items-center gap-1.5 hover:bg-purple-50 hover:border-purple-300 transition-all shadow-sm">
                           <i data-lucide="sparkles" class="w-3 h-3"></i> 
-                          <span>AI Suggest</span>
+                          <span>اقتراح ذكي</span>
                         </button>
                     </div>
 
                     <div class="p-4 flex-1 flex flex-col min-h-0">
                         <div class="flex gap-2 mb-4">
-                            <input type="text" id="newTaskInput" placeholder="Add a new task in English..." class="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 font-en text-left text-sm transition-all" dir="ltr">
+                            <!-- Input is LTR for English Tasks -->
+                            <input type="text" id="newTaskInput" placeholder="أضف مهمة جديدة باللغة الإنجليزية..." class="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-slate-50 font-en text-left text-sm transition-all" dir="ltr">
                             <button onclick="app.addTask()" class="bg-blue-600 hover:bg-blue-700 text-white w-12 rounded-xl flex items-center justify-center transition-colors shadow-lg shadow-blue-500/20">
                               <i data-lucide="plus" class="w-6 h-6"></i>
                             </button>
@@ -212,11 +213,12 @@
 
                 <!-- Reports -->
                 <div class="bg-white rounded-2xl shadow-sm border border-slate-200 h-fit">
-                    <div class="p-5 border-b border-slate-100 bg-slate-50/50 rounded-t-2xl">
+                    <div class="p-5 border-b border-slate-100 bg-slate-50/50 rounded-t-2xl flex justify-between items-center">
                         <h3 class="font-bold text-slate-800 flex items-center gap-2">
-                           <i data-lucide="bar-chart-3" class="w-5 h-5 text-emerald-500"></i>
-                           <span>التقرير الأسبوعي</span>
+                           <i data-lucide="inbox" class="w-5 h-5 text-emerald-500"></i>
+                           <span>التقارير المستلمة</span>
                         </h3>
+                        <span class="text-[10px] bg-slate-200 px-2 py-1 rounded text-slate-500 font-bold">واجب الطالب</span>
                     </div>
 
                     <div id="reportContainer" class="p-6">
@@ -230,39 +232,39 @@
         <div id="view-student" class="hidden fade-in pb-28 max-w-3xl mx-auto">
              <!-- Week Navigator -->
             <div class="flex items-center justify-between mb-8 bg-white p-2 rounded-2xl shadow-sm border border-slate-200 sticky top-24 z-30">
-                <!-- PREV (Visual Left): Should go to NEWER weeks (Index - 1) -->
-                <button id="studentPrevBtn" onclick="app.navStudentWeek('PREV')" class="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-slate-100 text-slate-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                <!-- PREV: Visual Left in RTL is NEXT logical item (Newer) -->
+                <button id="studentNextBtn" onclick="app.navStudentWeek('NEXT')" class="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-slate-100 text-slate-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
                 </button>
        
                 <div class="text-center">
-                   <h2 id="studentWeekTitle" class="font-bold text-slate-800 text-lg flex items-center justify-center gap-2 font-en">
+                   <h2 id="studentWeekTitle" class="font-bold text-slate-800 text-lg flex items-center justify-center gap-2">
                      <!-- Week Title -->
                    </h2>
                    <span id="studentWeekDate" class="text-[10px] text-slate-400 font-en font-medium uppercase tracking-wider"></span>
                 </div>
        
-                <!-- NEXT (Visual Right): Should go to OLDER weeks (Index + 1) -->
-                <button id="studentNextBtn" onclick="app.navStudentWeek('NEXT')" class="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-slate-100 text-slate-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
-                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                <!-- NEXT: Visual Right in RTL is PREV logical item (Older) -->
+                <button id="studentPrevBtn" onclick="app.navStudentWeek('PREV')" class="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-slate-100 text-slate-600 transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
                 </button>
             </div>
 
             <!-- Hero Section -->
             <div class="bg-gradient-to-br from-indigo-600 to-blue-700 rounded-3xl p-8 shadow-xl shadow-indigo-500/20 mb-8 text-center relative overflow-hidden text-white">
-                <div class="absolute top-0 right-0 p-8 opacity-10 transform rotate-12">
+                <div class="absolute top-0 left-0 p-8 opacity-10 transform -rotate-12">
                   <i data-lucide="award" class="w-48 h-48"></i>
                 </div>
                 
                 <div class="relative z-10">
-                    <h1 id="studentHeroTitle" class="text-3xl font-bold mb-2 font-en tracking-tight">Hello, Hero! 👋</h1>
-                    <p id="studentHeroSubtitle" class="text-indigo-100 mb-6 font-en text-sm">Complete tasks to level up your English!</p>
+                    <h1 id="studentHeroTitle" class="text-3xl font-bold mb-2 tracking-tight">مرحباً يا بطل! 👋</h1>
+                    <p id="studentHeroSubtitle" class="text-indigo-100 mb-6 text-sm">أكمل المهام لتطوير لغتك الإنجليزية!</p>
                     
                     <!-- Progress Bar -->
                     <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
-                      <div class="flex justify-between text-xs font-bold text-indigo-100 mb-2 font-en uppercase tracking-wider">
-                        <span>Current Progress</span>
-                        <span id="studentProgressText">0%</span>
+                      <div class="flex justify-between text-xs font-bold text-indigo-100 mb-2 uppercase tracking-wider">
+                        <span>التقدم الأسبوعي</span>
+                        <span id="studentProgressText" class="font-en">0/0 Tasks</span>
                       </div>
                       <div class="w-full bg-black/20 rounded-full h-3 overflow-hidden">
                         <div id="studentProgressBar" class="bg-yellow-400 h-3 rounded-full transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(250,204,21,0.6)] relative" style="width: 0%">
@@ -275,9 +277,9 @@
 
             <!-- Task List -->
             <div class="space-y-4 mb-8">
-                <h2 class="text-lg font-bold text-slate-800 px-2 flex items-center gap-2 font-en">
+                <h2 class="text-lg font-bold text-slate-800 px-2 flex items-center gap-2">
                    <span class="bg-yellow-100 text-yellow-600 p-1.5 rounded-lg"><i data-lucide="star" class="w-4 h-4 fill-current"></i></span>
-                   Your Missions:
+                   المهام المطلوبة:
                 </h2>
                 <div id="studentTaskList" class="space-y-3">
                     <!-- Student Tasks -->
@@ -286,17 +288,17 @@
 
             <!-- Audio Recorder -->
             <div class="mb-8">
-                <h2 class="text-lg font-bold text-slate-800 px-2 mb-3 font-en flex items-center gap-2">
+                <h2 class="text-lg font-bold text-slate-800 px-2 mb-3 flex items-center gap-2">
                     <span class="bg-red-100 text-red-500 p-1.5 rounded-lg"><i data-lucide="mic" class="w-4 h-4"></i></span>
-                    Speaking Practice:
+                    تدريب المحادثة:
                 </h2>
                 <div class="bg-white p-1 rounded-2xl shadow-sm border border-slate-200">
                     <div id="recorderInitial" class="flex flex-col items-center justify-center py-8 bg-slate-50/50 rounded-xl border-2 border-dashed border-slate-200 hover:bg-slate-50 transition-colors">
                         <button onclick="app.startRecording()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full flex items-center gap-3 transition-all transform hover:scale-105 shadow-lg shadow-indigo-500/30 group">
                             <i data-lucide="mic" class="w-5 h-5 group-hover:animate-bounce"></i>
-                            <span class="font-bold">Start Recording</span>
+                            <span class="font-bold">بدء التسجيل</span>
                         </button>
-                        <p class="mt-3 text-xs text-slate-400">Read the tasks aloud!</p>
+                        <p class="mt-3 text-xs text-slate-400">اقرأ المهام بصوت عالٍ وواضح!</p>
                     </div>
 
                     <div id="recorderActive" class="hidden text-center py-8 bg-red-50/30 rounded-xl border border-red-100">
@@ -305,10 +307,10 @@
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                               </span>
-                             <div id="recordTimer" class="text-4xl font-mono text-slate-700 font-bold tracking-widest">0:00</div>
+                             <div id="recordTimer" class="text-4xl font-mono text-slate-700 font-bold tracking-widest font-en">0:00</div>
                          </div>
                          <button onclick="app.stopRecording()" class="bg-white text-red-500 border border-red-200 hover:bg-red-50 px-8 py-3 rounded-full flex items-center gap-2 transition-all mx-auto font-bold shadow-sm">
-                            <i data-lucide="square" class="w-5 h-5 fill-current"></i> Stop
+                            <i data-lucide="square" class="w-5 h-5 fill-current"></i> توقف
                          </button>
                     </div>
 
@@ -317,7 +319,7 @@
                             <i data-lucide="play-circle" class="w-6 h-6"></i>
                         </div>
                         <audio id="audioPlayer" controls class="h-10 w-full flex-1"></audio>
-                        <button onclick="app.deleteRecording()" class="text-slate-400 hover:text-red-500 p-2 hover:bg-red-50 rounded-full transition-colors" title="Delete Recording">
+                        <button onclick="app.deleteRecording()" class="text-slate-400 hover:text-red-500 p-2 hover:bg-red-50 rounded-full transition-colors" title="حذف التسجيل">
                             <i data-lucide="trash-2" class="w-5 h-5"></i>
                         </button>
                     </div>
@@ -332,7 +334,7 @@
                   class="pointer-events-auto flex items-center gap-3 px-8 py-4 rounded-full font-bold text-lg shadow-2xl shadow-blue-900/20 transition-all transform bg-slate-900 text-white hover:scale-105 active:scale-95 disabled:opacity-70 disabled:grayscale ring-4 ring-white"
                 >
                   <i data-lucide="send" class="w-5 h-5"></i>
-                  <span>Submit Work</span>
+                  <span>إرسال الواجب</span>
                 </button>
               </div>
 
@@ -349,7 +351,7 @@
     <div id="loginModal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 fade-in">
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden transform transition-all scale-100 border border-white/20">
           <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 flex justify-between items-center">
-            <h3 id="loginModalTitle" class="font-bold text-slate-800 flex items-center gap-2 font-en">
+            <h3 id="loginModalTitle" class="font-bold text-slate-800 flex items-center gap-2">
                <!-- Title -->
             </h3>
             <button onclick="app.closeLoginModal()" class="text-slate-400 hover:text-red-500 transition-colors bg-white border border-slate-200 rounded-full p-1 hover:bg-red-50">
@@ -362,7 +364,7 @@
               <div id="loginModalIcon" class="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-4 shadow-inner">
                  <!-- Icon -->
               </div>
-              <p class="text-slate-500 text-sm">Enter password to continue</p>
+              <p class="text-slate-500 text-sm">أدخل كلمة المرور للمتابعة</p>
             </div>
             
             <div class="mb-6">
@@ -386,11 +388,11 @@
            <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500 border-4 border-white shadow-sm">
                <i data-lucide="trash-2" class="w-8 h-8"></i>
            </div>
-           <h3 class="text-xl font-bold text-slate-800 mb-2">Are you sure?</h3>
-           <p id="confirmMessage" class="text-slate-500 mb-8 text-sm leading-relaxed">This action cannot be undone.</p>
+           <h3 class="text-xl font-bold text-slate-800 mb-2">هل أنت متأكد؟</h3>
+           <p id="confirmMessage" class="text-slate-500 mb-8 text-sm leading-relaxed">لا يمكن التراجع عن هذا الإجراء.</p>
            <div class="flex gap-3 justify-center">
-               <button onclick="app.closeConfirmModal()" class="flex-1 py-3 rounded-xl text-slate-600 font-bold bg-slate-100 hover:bg-slate-200 transition-colors">Cancel</button>
-               <button id="confirmActionBtn" class="flex-1 py-3 rounded-xl bg-red-500 text-white font-bold hover:bg-red-600 transition-colors shadow-lg shadow-red-500/30">Delete</button>
+               <button onclick="app.closeConfirmModal()" class="flex-1 py-3 rounded-xl text-slate-600 font-bold bg-slate-100 hover:bg-slate-200 transition-colors">إلغاء</button>
+               <button id="confirmActionBtn" class="flex-1 py-3 rounded-xl bg-red-500 text-white font-bold hover:bg-red-600 transition-colors shadow-lg shadow-red-500/30">حذف</button>
            </div>
        </div>
     </div>
@@ -413,8 +415,8 @@
                <div>
                   <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">كلمة مرور المالك</label>
                   <div class="relative">
-                     <i data-lucide="lock" class="w-5 h-5 text-slate-400 absolute left-3 top-1/2 transform -translate-y-1/2 z-10"></i>
-                     <input type="text" id="settingAdminPass" class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none font-en text-slate-700 font-medium bg-slate-50 focus:bg-white transition-colors" />
+                     <i data-lucide="lock" class="w-5 h-5 text-slate-400 absolute right-3 top-1/2 transform -translate-y-1/2 z-10"></i>
+                     <input type="text" id="settingAdminPass" class="w-full pr-10 pl-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none font-en text-slate-700 font-medium bg-slate-50 focus:bg-white transition-colors" dir="ltr" />
                   </div>
                </div>
 
@@ -422,8 +424,8 @@
                <div>
                   <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">كلمة مرور الطالب</label>
                   <div class="relative">
-                     <i data-lucide="lock" class="w-5 h-5 text-slate-400 absolute left-3 top-1/2 transform -translate-y-1/2 z-10"></i>
-                     <input type="text" id="settingStudentPass" class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-en text-slate-700 font-medium bg-slate-50 focus:bg-white transition-colors" />
+                     <i data-lucide="lock" class="w-5 h-5 text-slate-400 absolute right-3 top-1/2 transform -translate-y-1/2 z-10"></i>
+                     <input type="text" id="settingStudentPass" class="w-full pr-10 pl-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-en text-slate-700 font-medium bg-slate-50 focus:bg-white transition-colors" dir="ltr" />
                   </div>
                </div>
 
@@ -478,7 +480,7 @@
                 if (weeks.length === 0) {
                     const firstWeek = {
                         id: new Date().toISOString().slice(0, 10),
-                        title: 'Week 1 - Welcome',
+                        title: 'الأسبوع 1 - ترحيب',
                         createdAt: Date.now()
                     };
                     weeks.push(firstWeek);
@@ -541,8 +543,9 @@
                 }
                 try {
                     const ai = new GoogleGenAI({ apiKey: API_KEY });
-                    const prompt = `Suggest ${count} fun and simple English language tasks for a student. 
+                    const prompt = `Suggest ${count} fun and simple English language tasks for a student learning English. 
                     Focus: Vocabulary, Speaking, or Grammar. 
+                    The tasks MUST be in English.
                     Output: JSON array of strings. 
                     Example: ["Read a story aloud", "Write 3 sentences about cats"]`;
 
@@ -652,10 +655,12 @@
                     document.getElementById('view-login').classList.remove('hidden');
                     state.role = null;
                 } else if (viewName === 'ADMIN') {
+                    this.loadData(); // REFRESH DATA to see new submissions
                     document.getElementById('view-admin').classList.remove('hidden');
                     document.getElementById('logoutBtn').classList.remove('hidden');
                     this.renderAdminView();
                 } else if (viewName === 'STUDENT') {
+                    this.loadData(); // Refresh data
                     document.getElementById('view-student').classList.remove('hidden');
                     document.getElementById('logoutBtn').classList.remove('hidden');
                     state.studentWeekIndex = 0;
@@ -667,7 +672,9 @@
             // --- ADMIN RENDERERS ---
 
             renderAdminView() {
+                // Reload weeks in case new ones were added
                 state.weeks = DataService.getWeeks();
+                
                 if (state.weeks.length > 0 && !state.selectedWeekId) {
                     state.selectedWeekId = state.weeks[0].id; // Default to newest
                 }
@@ -683,8 +690,8 @@
 
             renderAdminTasksAndReport() {
                 if (!state.selectedWeekId) {
-                     document.getElementById('adminTaskList').innerHTML = `<div class="text-center text-slate-400 py-10">Create a week to start.</div>`;
-                     document.getElementById('reportContainer').innerHTML = ``;
+                     document.getElementById('adminTaskList').innerHTML = `<div class="text-center text-slate-400 py-10">قم بإنشاء أسبوع للبدء.</div>`;
+                     document.getElementById('reportContainer').innerHTML = `<div class="text-center text-slate-400 py-10">لم يتم اختيار أسبوع.</div>`;
                      return;
                 }
 
@@ -696,7 +703,7 @@
                 if (tasks.length === 0) {
                     list.innerHTML = `<div class="flex flex-col items-center justify-center h-48 text-slate-400 text-sm border-2 border-dashed border-slate-100 rounded-xl bg-slate-50/50">
                         <i data-lucide="clipboard" class="w-8 h-8 mb-2 opacity-50"></i>
-                        No tasks yet. Add one manually or ask AI.
+                        لا توجد مهام بعد. أضف يدوياً أو استخدم الاقتراح الذكي.
                     </div>`;
                 } else {
                     list.innerHTML = tasks.map(t => `
@@ -710,6 +717,12 @@
                 }
 
                 // Render Report
+                if (!submission && tasks.length === 0) {
+                     document.getElementById('reportContainer').innerHTML = `<div class="text-center text-slate-400 py-10 text-sm">لا توجد مهام أو تسليمات بعد.</div>`;
+                     lucide.createIcons();
+                     return;
+                }
+
                 const completedIds = submission ? submission.completedTaskIds : [];
                 const total = tasks.length;
                 const doneCount = completedIds.length;
@@ -718,44 +731,78 @@
                 const completedList = tasks.filter(t => completedIds.includes(t.id));
                 const pendingList = tasks.filter(t => !completedIds.includes(t.id));
 
-                let reportHtml = `
+                let reportHtml = '';
+
+                // Submission Header Card
+                if (submission) {
+                    reportHtml += `
+                    <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-4 mb-5">
+                         <div class="flex justify-between items-center mb-3">
+                             <h4 class="font-bold text-indigo-900 flex items-center gap-2 text-sm">
+                                <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                                تم تسليم العمل
+                             </h4>
+                             <span class="text-[10px] text-indigo-500 font-en bg-white px-2 py-1 rounded-full border border-indigo-100 shadow-sm">
+                                ${new Date(submission.timestamp).toLocaleDateString()} at ${new Date(submission.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                             </span>
+                         </div>
+                         ${submission.audioBase64 
+                           ? `<div class="bg-white p-2 rounded-lg border border-indigo-100">
+                                <audio controls src="${submission.audioBase64}" class="w-full h-8 rounded-lg"></audio>
+                              </div>`
+                           : `<div class="text-xs text-slate-400 italic bg-white px-3 py-2 rounded-lg border border-slate-100">لا يوجد تسجيل صوتي.</div>`
+                         }
+                    </div>
+                    `;
+                } else {
+                     reportHtml += `
+                     <div class="bg-amber-50 border border-amber-100 rounded-xl p-4 mb-5 flex items-center gap-3">
+                        <div class="p-2 bg-amber-100 text-amber-600 rounded-lg"><i data-lucide="clock" class="w-4 h-4"></i></div>
+                        <div>
+                           <p class="text-amber-800 font-bold text-sm">لم يتم التسليم بعد</p>
+                           <p class="text-[10px] text-amber-600">لم يقم الطالب بإرسال المهام لهذا الأسبوع.</p>
+                        </div>
+                     </div>
+                     `;
+                }
+
+                // Stats Card
+                reportHtml += `
                     <div class="bg-gradient-to-br from-slate-900 to-slate-800 p-5 rounded-2xl text-white mb-6 shadow-xl shadow-slate-200">
                       <div class="flex justify-between items-end mb-3">
-                        <span class="text-slate-300 text-xs font-bold uppercase tracking-wider">Completion Rate</span>
-                        <span class="text-3xl font-bold font-en ${pct === 100 ? 'text-green-400' : 'text-white'}">${pct}%</span>
+                        <div>
+                            <div class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">التقدم</div>
+                            <div class="text-2xl font-bold font-en flex items-baseline gap-1">
+                                <span class="${pct === 100 ? 'text-green-400' : 'text-white'}">${doneCount}</span>
+                                <span class="text-slate-500 text-lg">/</span>
+                                <span class="text-slate-400 text-lg">${total}</span>
+                                <span class="text-xs text-slate-500 font-medium mr-1 font-cairo">مهام</span>
+                            </div>
+                        </div>
+                        <div class="text-xl font-bold font-en ${pct === 100 ? 'text-green-400' : 'text-blue-400'}">${pct}%</div>
                       </div>
-                      <div class="w-full bg-white/10 rounded-full h-2">
-                        <div class="h-2 rounded-full transition-all duration-700 ${pct === 100 ? 'bg-green-400' : 'bg-blue-400'}" style="width: ${pct}%"></div>
+                      <div class="w-full bg-white/10 rounded-full h-3 p-0.5">
+                        <div class="h-full rounded-full transition-all duration-1000 ease-out ${pct === 100 ? 'bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]' : 'bg-blue-500'}" style="width: ${pct}%"></div>
                       </div>
                     </div>
                 `;
 
-                if (submission && submission.audioBase64) {
-                    reportHtml += `
-                    <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 mb-6">
-                        <h4 class="text-indigo-900 font-bold mb-3 flex items-center gap-2 text-sm"><i data-lucide="mic" class="w-4 h-4"></i> Student Recording</h4>
-                        <audio controls src="${submission.audioBase64}" class="w-full h-8 rounded-lg"></audio>
-                        <p class="text-[10px] text-indigo-400 mt-2 text-left dir-ltr font-en">Sent: ${new Date(submission.timestamp).toLocaleDateString()} ${new Date(submission.timestamp).toLocaleTimeString()}</p>
-                    </div>`;
-                }
-
+                // Task Lists
                 if (completedList.length > 0) {
                     reportHtml += `
                     <div class="mb-4">
-                        <h4 class="flex items-center gap-2 font-bold text-green-700 mb-3 text-sm bg-green-50 p-2 rounded-lg w-fit"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Completed (${doneCount})</h4>
-                        <ul class="space-y-2">${completedList.map(t => `<li class="flex items-start gap-2 text-sm text-slate-500 font-en"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-green-400"></span><span class="line-through opacity-75">${t.text}</span></li>`).join('')}</ul>
+                        <h4 class="flex items-center gap-2 font-bold text-green-700 mb-3 text-sm bg-green-50 p-2 rounded-lg w-fit"><i data-lucide="check-circle-2" class="w-4 h-4"></i> مكتملة (${doneCount})</h4>
+                        <ul class="space-y-2">${completedList.map(t => `<li class="flex items-start gap-2 text-sm text-slate-500 font-en text-left dir-ltr"><span class="mt-1 w-1.5 h-1.5 rounded-full bg-green-400 shrink-0"></span><span class="line-through opacity-75">${t.text}</span></li>`).join('')}</ul>
                     </div>`;
                 }
 
                 if (pendingList.length > 0) {
                      reportHtml += `
                     <div>
-                        <h4 class="flex items-center gap-2 font-bold text-red-700 mb-3 text-sm bg-red-50 p-2 rounded-lg w-fit"><i data-lucide="x-circle" class="w-4 h-4"></i> Pending (${pendingList.length})</h4>
-                        <ul class="space-y-2">${pendingList.map(t => `<li class="flex items-start gap-2 text-sm text-slate-700 font-en font-medium"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400"></span>${t.text}</li>`).join('')}</ul>
+                        <h4 class="flex items-center gap-2 font-bold text-red-700 mb-3 text-sm bg-red-50 p-2 rounded-lg w-fit"><i data-lucide="x-circle" class="w-4 h-4"></i> قيد الانتظار (${pendingList.length})</h4>
+                        <ul class="space-y-2">${pendingList.map(t => `<li class="flex items-start gap-2 text-sm text-slate-700 font-en font-medium text-left dir-ltr"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>${t.text}</li>`).join('')}</ul>
                     </div>`;
                 }
-                
-                if (total === 0) reportHtml = '';
 
                 document.getElementById('reportContainer').innerHTML = reportHtml;
                 lucide.createIcons();
@@ -765,7 +812,7 @@
 
             renderStudentView() {
                 if (state.weeks.length === 0) {
-                    document.getElementById('studentTaskList').innerHTML = "<div class='text-center py-10 text-slate-400'>No active weeks available.</div>";
+                    document.getElementById('studentTaskList').innerHTML = "<div class='text-center py-10 text-slate-400'>لا توجد أسابيع نشطة حالياً.</div>";
                     return;
                 }
 
@@ -776,20 +823,11 @@
                 document.getElementById('studentWeekTitle').innerHTML = week.title;
                 document.getElementById('studentWeekDate').innerText = new Date(week.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                 
-                // Logic: 
-                // Weeks Array: [Week 5, Week 4, Week 3 ...] (Sorted Newest First)
-                // Index 0 = Week 5 (Newest). Index Last = Week 1 (Oldest).
-                
-                // Button LEFT (<) ID: studentPrevBtn. Logic: Go Newer (Index--)
-                // Button RIGHT (>) ID: studentNextBtn. Logic: Go Older (Index++)
-                
                 const maxIndex = state.weeks.length - 1;
-                
-                // Disable Left (<) if at index 0 (Newest)
-                document.getElementById('studentPrevBtn').disabled = (state.studentWeekIndex <= 0);
-                
-                // Disable Right (>) if at maxIndex (Oldest)
-                document.getElementById('studentNextBtn').disabled = (state.studentWeekIndex >= maxIndex);
+                // LOGIC: NEXT button (Visual Left in RTL) goes to NEWER (Index - 1)
+                // LOGIC: PREV button (Visual Right in RTL) goes to OLDER (Index + 1)
+                document.getElementById('studentNextBtn').disabled = (state.studentWeekIndex <= 0);
+                document.getElementById('studentPrevBtn').disabled = (state.studentWeekIndex >= maxIndex);
 
                 // State
                 state.completedTaskIds = submission ? submission.completedTaskIds : [];
@@ -800,16 +838,16 @@
                 const total = tasks.length;
                 const pct = total > 0 ? Math.round((done / total) * 100) : 0;
                 document.getElementById('studentProgressBar').style.width = `${pct}%`;
-                document.getElementById('studentProgressText').innerText = `${pct}%`;
+                document.getElementById('studentProgressText').innerText = `${done} / ${total}`;
                 
                 const title = document.getElementById('studentHeroTitle');
-                if (pct === 100) title.innerText = "Excellent Job! 🎉";
-                else title.innerText = "Hello, Hero! 👋";
+                if (pct === 100) title.innerText = "عمل رائع! 🎉";
+                else title.innerText = "مرحباً يا بطل! 👋";
 
                 // Tasks
                 const list = document.getElementById('studentTaskList');
                 if(tasks.length === 0) {
-                     list.innerHTML = '<div class="text-center text-slate-400 p-8 border-dashed border-2 border-slate-200 rounded-2xl bg-slate-50">No tasks for this week.</div>';
+                     list.innerHTML = '<div class="text-center text-slate-400 p-8 border-dashed border-2 border-slate-200 rounded-2xl bg-slate-50">لا توجد مهام لهذا الأسبوع.</div>';
                 } else {
                     list.innerHTML = tasks.map(t => {
                         const isDone = state.completedTaskIds.includes(t.id);
@@ -837,10 +875,12 @@
                 // Submit Button
                 const btn = document.getElementById('submitBtn');
                 if (submission) {
-                     btn.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5"></i> <span>Saved Successfully</span>`;
-                     btn.className = "flex items-center gap-3 px-8 py-4 rounded-full font-bold text-lg bg-green-500 text-white cursor-default shadow-lg shadow-green-500/20";
+                     btn.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5"></i> <span>تم الإرسال للمعلم</span>`;
+                     btn.className = "flex items-center gap-3 px-8 py-4 rounded-full font-bold text-lg bg-green-600 text-white cursor-default shadow-lg shadow-green-600/30 ring-4 ring-green-100";
+                     // We allow resubmitting if needed, so onclick remains, but visual cue changes
+                     btn.onclick = () => app.submitWork(); 
                 } else {
-                     btn.innerHTML = `<i data-lucide="send" class="w-5 h-5"></i> <span>Submit Work</span>`;
+                     btn.innerHTML = `<i data-lucide="send" class="w-5 h-5"></i> <span>إرسال الواجب</span>`;
                      btn.className = "pointer-events-auto flex items-center gap-3 px-8 py-4 rounded-full font-bold text-lg shadow-2xl shadow-blue-900/20 transition-all transform bg-slate-900 text-white hover:scale-105 active:scale-95 disabled:opacity-70 disabled:grayscale ring-4 ring-white";
                 }
                 
@@ -880,8 +920,8 @@
             openLoginModal(role) {
                 state.loginTarget = role;
                 const title = role === 'ADMIN' ? 'الدخول كمالك' : 'الدخول كطالب';
-                const iconClass = role === 'ADMIN' ? 'bg-indigo-100 text-indigo-600' : 'bg-blue-100 text-blue-600';
-                const iconName = role === 'ADMIN' ? 'shield-check' : 'graduation-cap';
+                const iconClass = role === 'ADMIN' ? 'bg-orange-100 text-orange-600' : 'bg-blue-100 text-blue-600';
+                const iconName = role === 'ADMIN' ? 'briefcase' : 'graduation-cap';
                 
                 document.getElementById('loginModalTitle').innerText = title;
                 const iconContainer = document.getElementById('loginModalIcon');
@@ -944,7 +984,7 @@
                 input.value = '';
                 input.focus();
                 UI.renderAdminTasksAndReport();
-                UI.showToast('Task added');
+                UI.showToast('تمت إضافة المهمة');
             },
             confirmDeleteTask(id) {
                 const modal = document.getElementById('confirmModal');
@@ -954,7 +994,7 @@
                     DataService.deleteTask(id);
                     UI.renderAdminTasksAndReport();
                     modal.classList.add('hidden');
-                    UI.showToast('Task deleted', 'error');
+                    UI.showToast('تم حذف المهمة', 'error');
                 };
             },
             closeConfirmModal() {
@@ -965,14 +1005,14 @@
                 const btn = document.getElementById('aiBtn');
                 const originalHTML = btn.innerHTML;
                 
-                btn.innerHTML = `<div class="w-3 h-3 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div> Thinking...`;
+                btn.innerHTML = `<div class="w-3 h-3 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div> جاري التفكير...`;
                 btn.disabled = true;
 
                 const tasks = await AIService.generateTasks();
                 tasks.forEach(t => DataService.addTask(state.selectedWeekId, t));
                 
                 UI.renderAdminTasksAndReport();
-                UI.showToast(`✨ Added ${tasks.length} AI suggestions`);
+                UI.showToast(`✨ تم إضافة ${tasks.length} مهام مقترحة`);
                 
                 btn.innerHTML = originalHTML;
                 btn.disabled = false;
@@ -1008,11 +1048,11 @@
                 const max = state.weeks.length - 1;
 
                 if (direction === 'NEXT') { 
-                    // RIGHT ARROW (>) -> Go Older (Index + 1)
-                    if (current < max) next = current + 1;
-                } else if (direction === 'PREV') { 
-                    // LEFT ARROW (<) -> Go Newer (Index - 1)
+                    // Visual Left -> Go Newer (Index - 1)
                     if (current > 0) next = current - 1;
+                } else if (direction === 'PREV') { 
+                    // Visual Right -> Go Older (Index + 1)
+                     if (current < max) next = current + 1;
                 }
                 
                 state.studentWeekIndex = next;
@@ -1071,6 +1111,8 @@
             },
 
             submitWork() {
+                if(state.weeks.length === 0) return;
+                
                 const weekId = state.weeks[state.studentWeekIndex].id;
                 const submission = {
                     id: Date.now().toString(),
@@ -1084,7 +1126,7 @@
                 
                 UI.renderStudentView(); 
                 confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
-                UI.showToast('Great Job! Work submitted successfully!');
+                UI.showToast('عمل رائع! تم إرسال الواجب للمعلم');
             }
         };
 

@@ -1,6 +1,6 @@
 {
-  "name": "English Tracker HTML",
-  "description": "Vanilla HTML/JS App for tracking English language learning progress.",
+  "name": "Injaz Tracker",
+  "description": "منصة إنجاز لمتابعة تقدم اللغة الإنجليزية",
   "requestFramePermissions": [
     "microphone"
   ]
